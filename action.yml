@@ -1,0 +1,15 @@
+name: "Initialise QuantCDN Cloud integration"
+description: "An action to initialise your build and deploy pipelines to QuantCDN"
+author: "QuantCDN"
+branding:
+  icon: "upload-cloud"
+  color: "blue"
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+        "$GITHUB_ACTION_PATH/scripts/kube-init.sh"
+        echo 'KUBECONFIG<<EOF' >> $GITHUB_ENV
+        echo $(cat ~/.kube/config | base64) >> $GITHUB_ENV
+        echo 'EOF' >> $GITHUB_ENV

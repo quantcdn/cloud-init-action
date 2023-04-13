@@ -28,6 +28,6 @@ Replace the placeholders with values for your project, these can be found in the
 
 ## Adding secrets
 
-Navigate to your repositories Settings page and find **Secrets**. Once there click on new secret, enter **QUANT_TOKEN** as the secret name and paste your provided Quant API token.
+Navigate to your repositories Settings page and find **Secrets**. Once there click on new secret, enter **SECTION_API_TOKEN** as the secret name and paste your provided Quant API token.
 
 You can learn more about [secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) and [actions](https://docs.github.com/en/actions).
